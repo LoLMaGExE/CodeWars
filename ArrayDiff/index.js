@@ -1,25 +1,25 @@
-function arrayDiff(a, b) {
-    let uniqueList = []
+function arrayDiff(FirstArr, SecondArr) {
+    let uniqueArr = []
 
-    for (let i = 0; i < a.length; i++) {
-        let aElement = a[i];
+    for (let i = 0; i < FirstArr.length; i++) {
+        let FirstElement = FirstArr[i];
 
         let isUnique = true;
 
-        for (let i = 0; i < b.length; i++) {
-            const bElement = b[i];
+        for (let i = 0; i < SecondArr.length; i++) {
+            const SecondElement = SecondArr[i];
 
-            if (aElement === bElement) {
+            if (FirstElement === SecondElement) {
                 isUnique = false
             }
         }
 
         if (isUnique) {
-            uniqueList.push(aElement)
+            uniqueArr.push(FirstElement)
         }
     }
 
-    return uniqueList
+    return uniqueArr
 }
 
 let [a, b] = [[1, 2, 2, 2, 3], []];
